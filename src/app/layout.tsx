@@ -1,6 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { injectSpeedInsights } from '@vercel/speed-insights'; // Import the correct function
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
+import NavBar from "./components/nav-bar";
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -32,6 +34,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Analytics/>
+        <NavBar />
         {children}
       </body>
     </html>
